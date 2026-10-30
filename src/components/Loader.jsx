@@ -1,9 +1,10 @@
-
-function Loader({ message = "Preparing your MediHub experience..." }) {
+function Loader() {
   return (
-    <div className="loader-container" role="status" aria-live="polite">
-      <span className="loader-spinner"></span>
-      <p>{message}</p>
+    <div className="loader-container">
+      <div className="spinner-border" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </div>
+      <p>Loading MediHub...</p>
     </div>
   );
 }

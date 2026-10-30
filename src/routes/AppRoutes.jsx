@@ -1,28 +1,25 @@
-
 import { Routes, Route } from "react-router-dom";
+
 import MainLayout from "../layouts/MainLayout.jsx";
+
 import Home from "../pages/Home.jsx";
+import Product from "../pages/Product.jsx";
+import Cart from "../pages/Cart.jsx";
+import Login from "../pages/Login.jsx";
+import Wishlist from "../pages/Wishlist.jsx";
 import ComingSoon from "../pages/ComingSoon.jsx";
 
 function AppRoutes() {
   return (
     <Routes>
-      <Route element={<MainLayout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<ComingSoon />} />
-        <Route path="/products/:id" element={<ComingSoon />} />
-        <Route path="/categories" element={<ComingSoon />} />
-        <Route path="/offers" element={<ComingSoon />} />
-        <Route path="/cart" element={<ComingSoon />} />
-        <Route path="/wishlist" element={<ComingSoon />} />
-        <Route path="/checkout" element={<ComingSoon />} />
-        <Route path="/login" element={<ComingSoon />} />
-        <Route path="/register" element={<ComingSoon />} />
-        <Route path="/about" element={<ComingSoon />} />
-        <Route path="/contact" element={<ComingSoon />} />
-        <Route path="/profile" element={<ComingSoon />} />
-        <Route path="/orders" element={<ComingSoon />} />
-        <Route path="/admin" element={<ComingSoon />} />
+      <Route path="/" element={<MainLayout />}>
+        <Route index element={<Home />} />
+        <Route path="products" element={<Product />} />
+        <Route path="cart" element={<Cart />} />
+        <Route path="wishlist" element={<Wishlist />} />
+        <Route path="login" element={<Login />} />
+        <Route path="about" element={<ComingSoon />} />
+        <Route path="contact" element={<ComingSoon />} />
         <Route path="*" element={<ComingSoon />} />
       </Route>
     </Routes>
